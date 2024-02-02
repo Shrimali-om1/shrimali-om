@@ -1,123 +1,33 @@
-
-<!-- /* This is the HTML PArt */ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <header>
-        <div>
-        <img src="./images/logo.PNG" alt="logo" class="brand">
-        <h1 class="logo">Nebula</h1>
+    <div class="container">
+        <h1 id="playerText">Tic Tac Toe</h1>
+        <button id="restartBtn">Restart</button>
+
+        <div id="gameboard">
+            <div class="box" id="0"></div>
+            <div class="box" id="1"></div>
+            <div class="box" id="2"></div>
+            <div class="box" id="3"></div>
+            <div class="box" id="4"></div>
+            <div class="box" id="5"></div>
+            <div class="box" id="6"></div>
+            <div class="box" id="7"></div>
+            <div class="box" id="8"></div>
+        </div>
     </div>
-    <div>
-        <ul class="menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Contacts</a></li>
-            <li><a href="">Pricing</a></li>
-            <li><a href="">Support</a></li>
-        </ul>
-    </div>
-    </header>
-    <section class="first">
-        <div class="content1">
-            <div class="a1">
-                <span>
-                    Tranform your space into
-                    a beautiful masterpiece
-                    of with our expert interior
-                    design services.
-                </span>
-                <button class="btn1">Book Now</button>
-            </div>
-            <div class="a2">
-                <img src="./images/flower.png" alt="flower" class="flowers">
-                <div class="block"></div>
-            </div>
-        </div>
-        <div class="content2">
-            <div class="b1">
-                <img src="./images/beauty-g6b25ec7ff_640.jpg" alt="beauty-g6b25ec7ff_640" class="beauty">
-            </div>
-            <div class="b2">
-                <span>
-                    Welcome to our interior design website, where we
-                    offer a comprehensive range of services to help 
-                    you tranform your home or office into a 
-                    beautiful, functional, and comfortable space. Our
-                    team of experienced interior designers will work 
-                    with you every step of the way, from
-                    conceptualizing your design to selecting the
-                    perfect color pallete, furniture, and decor to bring
-                    your vision to life.
-                </span>
-            </div>
-        </div>
-    </section>
-    <section class="second">
-        <h2>Simple, Transparent pricing</h2>
-        <h3>No contacts, No hidden pricing</h3>
-        <div class="subscribtion">
-            <div class="cards">
-                <h3>Intro</h3>
-                <a class="price">$19</a><a class="month">/month</a>
-                <a class="list-title">For most business</a>
-                <ul>
-                    <li>All Limited places</li>
-                    <li>Free consultant</li>
-                    <li>Walking place review</li>
-                    <li>All Limited places</li>
-                    <li>Free consultant</li>
-                    <li>Walking place review</li>
-                </ul>
-                <button class="btn2">Select</button>
-            </div>
-            <div class="cards">
-                <h3>Basic</h3>
-                <a class="price">$39</a><a class="month">/month</a>
-                <a class="list-title">For most business</a>
-                <ul>
-                    <li>All Limited places</li>
-                    <li>Free consultant</li>
-                    <li>Walking place review</li>
-                    <li>All Limited places</li>
-                    <li>Free consultant</li>
-                    <li>Walking place review</li>
-                </ul>
-                <button class="btn2">Select</button>
-            </div>
-            <div class="cards">
-                <h3>Popular</h3>
-                <a class="price">$99</a><a class="month">/month</a>
-                <a class="list-title">For most business</a>
-                <ul>
-                    <li>All Limited places</li>
-                    <li>Free consultant</li>
-                    <li>Walking place review</li>
-                    <li>All Limited places</li>
-                    <li>Free consultant</li>
-                    <li>Walking place review</li>
-                </ul>
-                <button class="btn2">Select</button>
-            </div>
-            <div class="cards">
-                <h3>Enerprise</h3>
-                <a class="price">$199</a><a class="month">/month</a>
-                <a class="list-title">For most business</a>
-                <ul>
-                    <li>All Limited places</li>
-                    <li>Free consultant</li>
-                    <li>Walking place review</li>
-                    <li>All Limited places</li>
-                    <li>Free consultant</li>
-                    <li>Walking place review</li>
-                </ul>
-                <button class="btn2">Select</button>
-            </div>
-        </div>
-    </section>
+    
+    <script src="/game_logic.js"></script>
 </body>
 </html>
