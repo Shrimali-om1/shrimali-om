@@ -1,366 +1,67 @@
-
-/* This is the CSS PArt */
 *{
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --orange: #F2C14E;
+    --winning-blocks: #2d414b;
+}
+
 body {
-    margin: 0;
+    color: var(--orange);
+    font-family: 'Finger Paint', cursive;
 }
-header,section {
-    margin: auto 60px auto 60px;
-}
-header{
-    padding-top: 10px;
-    display: flex;
-    justify-content: space-between  ;
-}
-.brand{
-    height: 50px;
-    position: relative;
-    top: 1vh;
-}
-.logo{
-    display: inline;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-}
-.menu li{
-    list-style: none;
-    padding: 5px;
-    padding-left: 10px;
-}
-.menu{
-    display: flex;
-    padding-top: 2vh;
-}
-.menu a{
-    text-decoration: none;
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-}
-.menu a:hover,.menu a:focus{
-    font-weight: bold;
-    color: #8553b4;
-}
-.first{
-    padding-top: 10vh;
-}
-.content1{
-    display: flex;  
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
 }
 
-.a1{
-    padding-left: 15vh;
-    width: 70vh;
-    padding-top: 8vh;
-    }
-.a1 span{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 30px;
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #37505C;
 }
-.btn1{
-    display: block;
-    background-color: white;
-    padding: 8px;
-    margin-left: 8px;
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: 20px;
+
+#gameboard {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+.box:nth-child(3n) {
+    border-right: none;
+}
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+} 
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: #333;
+    border-color: var(--orange);
     font-size: 18px;
-    border: 1px solid #1b69fa;
-    border-radius: 5px;
-    color: #1b69fa;
+    transition: 200ms transform;
+    font-weight: 600;
 }
-.btn1:hover,.btn1:focus{
-    background-color: #1b69fa;
-    color: white;
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
 }
-.a2{
-    padding-left: 45vh;
-    display: flex;
-}
-.flowers{
-    height: 375px;
-    position: relative;
-    left: 8vh;
-    top: 5vh;
-}
-.block{
-    background-color: #f9e9e9;
-    width: 210px;
-    height: 37vh;
-}
-.content2{
-    padding-top: 25vh;
-    display: flex;
-    margin: 0px 22vh 0px 22vh; 
-}
-.b1{
-    padding-left: 8vh;
-}
-.beauty{
-    height: 400px;
-}
-.b2 span{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 20px;
-}
-.b2{
-    width: 74vh;
-    padding-left: 5vh;
-}
-.second{
-    padding: 20vh;
-    margin: auto 60px auto 140px;
-    /* background: linear-gradient(183deg, rgba(249,249,249,1) 66%, rgba(214,210,210,1) 100%); */
-}
-.second h2,h3{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.second h3 {
-    font-size: 15px;
-    font-weight: 200;
-}
-.subscribtion{
-    padding-top:2vh ;
-    display: flex;
-    /* justify-content: center; */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.cards{
-    background-color: #f4f3f36f;
-    border: 2px solid #70707047;
-    margin-right: 3vh;
-    padding: 5px 15px 5px 15px;
-    border-radius: 10px;
-    width: 30vh;
-    height: 48vh;
-}
-.cards h3{
-    font-weight: bold;
-}
-.cards .price{
-    font-weight: bold;
-    font-size: 20px;
-}
-.cards .month{
-    font-size: 13px;
-}
-.list-title{
-    display: block;
-    padding-top: 2vh;
-}
-ul li{
-    font-size: 14px;
-}
-.btn2{
-    margin-top: 2vh;
-    background-color: #1b69fa;
-    color: white;
-    border: 2px solid #1b69fa;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 17px;
-    font-family: 'Times New Roman', Times, serif;
-    border-radius: 10px;
-}
-.btn2:hover{
-    background-color: white;
-    color: #1b69fa;
-    }
-/* Styles for iPad Air */
-/* @media screen and (device-width: 820px) and (device-height: 1180px) {
-    .brand {
-        height: 10vh;
-        top: 2vh;
-        }
-        .logo{
-            font-size: 5em;
-        }
-        header{
-            display: block;
-        }
-        .menu{
-            margin-top: 4vh;
-        }
-        .menu li{
-            padding-left:30px;
-        }
-        .menu li a{
-            font-size: 3vh;   
-        }
-        .content1{
-            display: flex;
-            flex-direction: column;
-        }
-        .first{
-            padding: 0;
-            margin: 0;
-        }
-        .a1 {
-            margin-top: 20vh;
-            padding: 0;
-            padding-left: 16vh;
-            order: 2;
-          }
-        .a1 span{
-            font-size: 4em;
-        }
-        .btn1{
-            border: #1b69fa 4px solid;
-            font-size: 3rem;
-            padding: 2vh;
-            margin-top: 5vh;
-            border-radius: 1vh;
-        }  
-        .a2 {
-            
-            margin-top: 5vh;
-            padding-left: 4vh;
-            order: 1;
-          }
-        .block{
-            width: 60vh;
-            height: 42vh;
-        }
-        .flowers {
-            height: 50vh;
-        }
-        .content2{
-            display: block;
-            padding-top: 50px;
-            margin: 5vh;
-        }
-        .b1{
-            padding-left: 1vh;
-            width: 100%;
-        }
-        .beauty{
-            height: 65vh;
-        }
-        .b2{
-            margin-top: 5vh;
-            
-            padding-right: 6vh;
-        }
-        .b2 span{
-            font-size: 3em;
-        }
-        .second{
-           
-            padding: 0%;
-            padding-top: 5vh;
-        }
-        .second h2 {
-            font-size: 50px;
-        }
-        .second h3 {
-            font-size: 40px;
-        }
-        .subscribtion{
-            display: block;
-        }
-        .cards{
-            border: 3px solid #70707047;
-            margin: 0;
-            padding: 2vh;
-            border-radius: 2vh;
-            width: 40vh;
-            height: 58vh;
-            margin-bottom: 5vh;
-            margin-left: 10vh;
-        }
-        .cards h3{
-            font-size: 50px;
-        }
-        .cards .price {
-            font-size: 43px;
-        }
-        .cards .month {
-            font-size: 32px;
-        }
-        .list-title{
-            padding-top: 5vh;
-            font-size: 35px;
-        }
-        ul li{
-            font-size: 30px;
-        }
-        .btn2{
-            margin-top: 5vh;
-            padding: 1.5vh;
-            font-size: 2em;
-        }
-} */
-
-
-/* Styles for Mobile-Phone */
-@media  screen and (max-width: 480px) {
-    header,
-    section {
-    margin: auto 20px auto 20px;
-    }
-    .a1 {
-        padding-left: 10px;
-        width: 100%;
-        padding-top: 5vh;
-    }
-    
-    .a2 {
-        padding-left: 20px;
-        display: block;
-    }
-    
-    .flowers {
-        position: relative;
-        left: 0;
-        top: 0;
-        height: 50vh;
-    }
-    
-    .block {
-        width: 100%;
-        height: auto;
-    }
-    
-    .content2 {
-        padding-top: 5vh;
-        flex-direction: column;
-    }
-    
-    .b1 {
-        padding-left: 10px;
-    }
-    
-    .b2 {
-        width: 100%;
-        padding-left: 10px;
-    }
-    
-    .second {
-        padding: 10vh;
-        margin: auto 20px auto 20px;
-    }
-}        
-
-
-
-
-
-/* Small Devices (portrait and landscape) ----------------- */
-/* @media only screen and (max-width : 380px) {  
-    .brand{
-        height: 2vh;
-    }
-    header{
-        display: inline-table;
-        flex-wrap: wrap;
-    }
-    
-} */
-
-  
-  
